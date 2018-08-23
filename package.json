@@ -1,0 +1,19 @@
+{
+  "name": "fail-api",
+  "version": "1.0.0",
+  "description": "REST API to test various failure responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "repository": "https://github.com/zlypher/fail-api",
+  "author": "Thomas Prochazka <thomas.prochazka@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
