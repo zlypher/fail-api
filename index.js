@@ -7,13 +7,13 @@ const router = express.Router();
 
 const sendResult = (res, code) => {
     if (isNaN(code)) {
-        res.sendStatus(404);
+        res.sendStatus(418);
     }
     
     res.sendStatus(code);
 }
 
-router.get("/fail/:code", (req, res) => {
+router.all("/fail/:code", (req, res) => {
     const code = parseInt(req.params.code, 10);
     const delay = parseInt(req.query.delay, 10);
 
