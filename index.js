@@ -1,5 +1,8 @@
 const express = require("express");
 const cors = require("cors");
+const morgan = require("morgan");
+const fs = require("fs");
+const path = require('path')
 const router = express.Router();
 
 const sendResult = (res, code) => {
@@ -21,7 +24,13 @@ router.get("/fail/:code", (req, res) => {
     }
 });
 
+const accessStream = fs.createWriteStream(path.join(__dirname, "access.log"), {
+    flags: "a"
+});
+
 const app = express();
+app.use(morgan("combined", { stream: accessStream }));
+app.use(morgan("dev"));
 app.use(cors());
 app.use("/", router);
 app.listen(process.env.PORT || 1234);
