@@ -8,9 +8,9 @@ const router = express.Router();
 const sendResult = (res, code) => {
     if (isNaN(code)) {
         res.sendStatus(418);
+    } else {
+        res.sendStatus(code);
     }
-    
-    res.sendStatus(code);
 }
 
 router.all("/fail/:code", (req, res) => {
