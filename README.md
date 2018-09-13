@@ -1,5 +1,6 @@
 # fail-api
 
+[![Build Status](https://travis-ci.org/zlypher/fail-api.svg?branch=master)](https://travis-ci.org/zlypher/fail-api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Getting Started
